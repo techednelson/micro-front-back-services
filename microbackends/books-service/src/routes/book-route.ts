@@ -1,12 +1,11 @@
-import * as express from 'express';
-import { Router }  from 'express';
-import { findAll, find, save, update, remove } from '../controller/book-controller';
+import express, { Router } from 'express';
+import { findAll, findById, save, update, remove } from '../controllers/book-controller';
 
 const router: Router = express.Router();
 
 router.get('/all', findAll);
 
-router.get('id', find)
+router.get('id', findById);
 
 router.post('book', save);
 
